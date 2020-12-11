@@ -20,7 +20,7 @@ const characterDataDefault = {
 
 const App = () => {
   // BUNCHA CONSTS HERE FOR THE STATE STUFF
-  const [characterData, setCharacterData] = useState(characterDataDefault);
+  const [characterData, setCharacterData] = useState('steve');
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -34,7 +34,7 @@ const App = () => {
           const stank = res.data.results
           setCharacterData(
             stank.map((characterData) => {
-              console.log('37',characterData);
+              // console.log('37',characterData);
               return characterData
             } )
           )
@@ -50,7 +50,7 @@ const App = () => {
     };
     fetchData();
     
-    console.log('49',characterData);
+    // console.log('49',characterData);
 
   }, []);
 

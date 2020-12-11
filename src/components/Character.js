@@ -23,7 +23,7 @@ export default function Character({ characterData }) {
 //           console.log(Map())
 //       }
 //       )};
-// console.log(characterData)
+console.log(characterData)
   return (
     // <header>
         
@@ -31,7 +31,7 @@ export default function Character({ characterData }) {
 
         <div>
         <h2> 
-           {characterData.name} 
+           {name} 
         </h2>
 
 
@@ -55,3 +55,6 @@ export default function Character({ characterData }) {
 
 // MAP IN APP, PASSING THROUGH ID NUMBER,
 //THEN USE ID NUMBER AS IDENTIFIER FOR CHARACTER DISPLAY FUNCTION HERE
+
+
+//MAYBE FOR EACH THROUGH THE ARRAY, RUNNING THROUGH THE CHARACTER CARD?
