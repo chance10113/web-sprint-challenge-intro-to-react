@@ -51,6 +51,6 @@ const App = () => {
 export default App;
 
 const StyledDiv = styled.div`
-background-color: ${(pr)=> (pr.theme.primaryColor)};
-color: ${(pr)=> (pr.theme.black)};
-`
+  background-color: ${(pr) => pr.theme.primaryColor};
+  color: ${(pr) => pr.theme.black};
+`;
