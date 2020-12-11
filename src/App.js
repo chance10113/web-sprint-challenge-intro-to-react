@@ -28,22 +28,29 @@ const App = () => {
   useEffect(() => {
     const fetchData = () => {
       axios
-        .get("https://rickandmortyapi.com/api/character")
+        .get("https://rickandmortyapi.com/api/character/")
 
         .then((res) => {
-          setCharacterData(res.data.results);
-          console.log("App.js .then", res.data);
-          console.log("App.js .then.id", res.data.results)
-          console.log(characterData);
+          const stank = res.data.results
+          setCharacterData(
+            stank.map((characterData) => {
+              console.log('37',characterData);
+              return characterData
+            } )
+          )
+          // setCharacterData(res.data.results);
+          // // console.log("App.js .then", res.data);
+          // // console.log("App.js .then.id", res.data.results)
+          // console.log('37' ,res.data.results[1].name);
         })
-
+//MAP THROUGH SET CHARACTER DATA!
         .catch((beef) => {
           console.log("Failure in App.js", beef);
         });
     };
     fetchData();
-
     
+    console.log('49',characterData);
 
   }, []);
 

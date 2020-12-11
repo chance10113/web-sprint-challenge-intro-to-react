@@ -18,10 +18,30 @@ export default function Character({ characterData }) {
     created,
   } = characterData;
 
+//   const Map = () => {
+//       characterData.map((characterData) => {
+//           console.log(Map())
+//       }
+//       )};
+// console.log(characterData)
   return (
-    <header>
-        <h2> STEVE </h2>
-    </header>
+    // <header>
+        
+    // </header>
+
+        <div>
+        <h2> 
+           {characterData.name} 
+        </h2>
+
+
+
+
+
+
+
+
+        </div>
 
 
 
