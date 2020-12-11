@@ -20,7 +20,7 @@ const characterDataDefault = {
 
 const App = () => {
   // BUNCHA CONSTS HERE FOR THE STATE STUFF
-  const [characterData, setCharacterData] = useState('steve');
+  const [characterData, setCharacterData] = useState(characterDataDefault);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -31,17 +31,17 @@ const App = () => {
         .get("https://rickandmortyapi.com/api/character/")
 
         .then((res) => {
-          const stank = res.data.results
-          setCharacterData(
-            stank.map((characterData) => {
-              // console.log('37',characterData);
-              return characterData
-            } )
-          )
-          // setCharacterData(res.data.results);
-          // // console.log("App.js .then", res.data);
-          // // console.log("App.js .then.id", res.data.results)
-          // console.log('37' ,res.data.results[1].name);
+          // const stank = res.data.results
+          // setCharacterData(
+          //   stank.map((characterData) => {
+          //     // console.log('37',characterData);
+          //     return characterData
+          //   } )
+          // )
+          setCharacterData(res.data.results);
+          // console.log("App.js .then", res.data);
+          // console.log("App.js .then.id", res.data.results)
+          console.log('37' ,res.data.results[1].name);
         })
 //MAP THROUGH SET CHARACTER DATA!
         .catch((beef) => {
@@ -63,7 +63,12 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      < Character characterData = {characterData} />
+
+      { characterData.map((characterData) => {
+        return < Character key={characterData.id} characterData = {characterData} />
+      } ) }
+
+      {/* < Character characterData = {characterData} /> */}
     </div>
   );
 };

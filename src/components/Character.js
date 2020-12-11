@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Character({ characterData }) {
+export default function CharacterCard({ characterData }) {
   const {
     id,
     name,
@@ -25,9 +25,7 @@ export default function Character({ characterData }) {
 //       )};
 console.log(characterData)
   return (
-    // <header>
-        
-    // </header>
+  
 
         <div>
         <h2> 
