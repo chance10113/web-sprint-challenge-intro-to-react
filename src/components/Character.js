@@ -11,31 +11,39 @@ export default function CharacterCard({ characterData }) {
     gender,
     // origin,
     // location,
-    image,
-    episode,
-    url,
+    //image,
+    // episode,
+    // url,
     created,
   } = characterData;
 
   return (
-    <section>
-      <h3>{name}</h3>
-      <p> id: {id} </p>
-      <p> status: {status} </p>
-      <p> species: {species} </p>
-      <p> type: {type} </p>
-      <p> gender: {gender} </p>
-      {/* <p>   origin: {origin} </p> */}
-      {/* <p>  location: {location} </p> */}
-      {/* <img alt= 'steve' src = {image} >  </img> */}
-      <p> episode: {episode} </p>
-      <p> url: {url} </p>
-      <p> created: {created} </p>
-    </section>
+    <StyledSection>
+      <StyledH3>{name}</StyledH3>
+      <div>
+      <StyledP> Id: {id} </StyledP>
+      <StyledP> Status: {status} </StyledP>
+      <StyledP> Species: {species} </StyledP>
+      { type === ""?  <StyledP>  Type: Normal  </StyledP>  : <StyledP>  Type: {type}  </StyledP> }
+      
+      <StyledP> Gender: {gender} </StyledP>
+      {/* <StyledP>   origin: {origin} </StyledP> */}
+      {/* <StyledP>  location: {location} </StyledP> */}
+      {/* <Styledimg alt= 'steve' src = {image} >  </Styledimg> */}
+      {/* <StyledP> episode: {episode} </StyledP>
+      <StyledP> url: {url} </StyledP> */}
+      <StyledP> Created: {created} </StyledP>
+      </div>
+      
+    </StyledSection>
   );
 }
 
 const StyledSection = styled.section`
+background-color: ${(pr)=> (pr.theme.primaryColor) } ;
+background-repeat: no-repeat;
+text-align: center;
+color: ${(pr)=> (pr.theme.black)};
 
 `
 

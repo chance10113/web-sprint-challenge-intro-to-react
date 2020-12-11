@@ -2,7 +2,7 @@ export default {
     primaryColor: '#b7e4f9ff',
     secondaryColor: '#fafd7cff',
     tertiaryColor: '#526e2dff',
-    QuartiaryColor: '#8291eff',
+    quartiaryColor: '#82491eff',
     black: '#111111',
     white: '#d8d8d8',
     breakpoints: {

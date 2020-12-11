@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Character from "./components/Character";
+import styled from "styled-components";
 
 const characterDataDefault = {
   id: 0,
@@ -36,16 +37,20 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <StyledDiv className="App">
       <h1 className="Header">Characters</h1>
-
       {characterData.map((characterData) => {
         return (
           <Character key={characterData.id} characterData={characterData} />
         );
       })}
-    </div>
+    </StyledDiv>
   );
 };
 
 export default App;
+
+const StyledDiv = styled.div`
+background-color: ${(pr)=> (pr.theme.primaryColor)};
+color: ${(pr)=> (pr.theme.black)};
+`
