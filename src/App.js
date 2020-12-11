@@ -4,7 +4,7 @@ import axios from "axios";
 import Character from "./components/Character";
 
 const characterDataDefault = {
-  id: "",
+  id: 0,
   name: "",
   status: "",
   species: "",
@@ -20,7 +20,7 @@ const characterDataDefault = {
 
 const App = () => {
   // BUNCHA CONSTS HERE FOR THE STATE STUFF
-  const [characterData, setCharacterData] = useState(characterDataDefault);
+  const [characterData, setCharacterData] = useState([characterDataDefault]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
