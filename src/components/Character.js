@@ -9,8 +9,8 @@ export default function CharacterCard({ characterData }) {
     species,
     type,
     gender,
-    origin,
-    location,
+    // origin,
+    // location,
     image,
     episode,
     url,
@@ -18,7 +18,7 @@ export default function CharacterCard({ characterData }) {
   } = characterData;
 
   return (
-    <div>
+    <section>
       <h3>{name}</h3>
       <p> id: {id} </p>
       <p> status: {status} </p>
@@ -27,10 +27,26 @@ export default function CharacterCard({ characterData }) {
       <p> gender: {gender} </p>
       {/* <p>   origin: {origin} </p> */}
       {/* <p>  location: {location} </p> */}
-      {/* <img alt= 'steve'> url({image}) </img> */}
+      {/* <img alt= 'steve' src = {image} >  </img> */}
       <p> episode: {episode} </p>
       <p> url: {url} </p>
       <p> created: {created} </p>
-    </div>
+    </section>
   );
 }
+
+const StyledSection = styled.section`
+
+`
+
+const StyledH3 = styled.h3`
+
+`
+
+const StyledP = styled.p`
+
+`
+
+const Styledimg = styled.img`
+
+`
