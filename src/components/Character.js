@@ -1,4 +1,3 @@
-// Write your Character component here
 import React from "react";
 import styled from "styled-components";
 
@@ -18,41 +17,20 @@ export default function CharacterCard({ characterData }) {
     created,
   } = characterData;
 
-//   const Map = () => {
-//       characterData.map((characterData) => {
-//           console.log(Map())
-//       }
-//       )};
-console.log(characterData)
   return (
-  
-
-        <div>
-        <h2> 
-           {name} 
-        </h2>
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-  )
-
-  //   GOTTA FIGURE OUT HOW TO DISPLAY ALL Data, AND MAP IT OVER!!!
-  //   MAP HERE OR IN APP?
-  //   PROLLY APP
+    <div>
+      <h3>{name}</h3>
+      <p> id: {id} </p>
+      <p> status: {status} </p>
+      <p> species: {species} </p>
+      <p> type: {type} </p>
+      <p> gender: {gender} </p>
+      {/* <p>   origin: {origin} </p> */}
+      {/* <p>  location: {location} </p> */}
+      {/* <img alt= 'steve'> url({image}) </img> */}
+      <p> episode: {episode} </p>
+      <p> url: {url} </p>
+      <p> created: {created} </p>
+    </div>
+  );
 }
-
-// MAP IN APP, PASSING THROUGH ID NUMBER,
-//THEN USE ID NUMBER AS IDENTIFIER FOR CHARACTER DISPLAY FUNCTION HERE
-
-
-//MAYBE FOR EACH THROUGH THE ARRAY, RUNNING THROUGH THE CHARACTER CARD?
