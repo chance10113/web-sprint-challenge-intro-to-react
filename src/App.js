@@ -40,13 +40,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {characterData.map((characterData) => {
+        return (
+          <Character key={characterData.id} characterData={characterData} />
+        );
+      })}
     </div>
   );
 };
 
 export default App;
 
-const StyledDiv = styled.div`
-  background-color: ${(pr) => pr.theme.primaryColor};
-  color: ${(pr) => pr.theme.black};
-`;
