@@ -6,10 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ThemeProvider } from "styled-components";
 import theme from "./Theme-Holder.js";
 
-
 ReactDOM.render(
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>,
-    document.getElementById("root")
-  );
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root")
+);
